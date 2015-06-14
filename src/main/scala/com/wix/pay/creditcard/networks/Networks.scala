@@ -31,7 +31,7 @@ object Networks {
   val visa = "visa"
 
 
-  private val amexRegex = """^3([47]\d{3}|569[04]|[23]\d{3})\d{10}$""".r
+  private val amexRegex = """^3([47]\d{3}|[23]\d{3})\d{10}$""".r
   private val dankortRegex = """^5019(34)\d{10}$""".r
   private val dinersRegex = """^36(409\d|5\d{3})\d{8}$""".r
   private val discoverRegex = """^(6011\d{2}|65\d{4}|64[4-9]\d{3}|601300|3[^547]\d{4})\d{10}$""".r
