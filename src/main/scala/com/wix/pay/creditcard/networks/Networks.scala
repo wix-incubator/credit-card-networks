@@ -33,8 +33,8 @@ object Networks {
 
   private val amexRegex = """^3([47]\d{3}|[23]\d{3})\d{10}$""".r
   private val dankortRegex = """^5019(34)\d{10}$""".r
-  private val dinersRegex = """^36(409\d|5\d{3})\d{8}$""".r
-  private val discoverRegex = """^(6011\d{2}|65\d{4}|64[4-9]\d{3}|601300|3[^547]\d{4})\d{10}$""".r
+  private val dinersRegex = """^3(0[0-59]|[689]\d)\d{11}$""".r
+  private val discoverRegex = """^(6011\d{2}|65\d{4}|64[4-9]\d{3}|601300|3[123689]\d{4}|309\d{3})\d{10}$""".r
   private val isracardRegex = """^\d{8,9}$""".r
   private val jcbRegex = """^35(?:2[89]|[3-8]\d)\d{12}$""".r
   private val maestroRegex =
