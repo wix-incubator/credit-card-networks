@@ -14,7 +14,7 @@ import scala.reflect.macros.blackbox.Context
 /** Credit Card Network.
   * Identifies a credit card's Network based on its (full) number, and according to
   * [[http://en.wikipedia.org/wiki/Bank_card_number]] and [[https://www.bindb.com/bin-database.html]].
-  * In addition, exposes all supported Networks (via the [[Networks.all()]] method).
+  * In addition, exposes all supported Networks (via the {{{Networks.all()}}} method).
   *
   * @author <a href="mailto:ohadr@wix.com">Raz, Ohad</a>
   */
