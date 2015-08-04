@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wix.pay</groupId>
     <artifactId>credit-card-networks</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Credit-Card Networks</name>
     <description>Credit-Card Networks</description>
@@ -39,7 +37,8 @@
 		<url>https://github.com/wix/credit-card-networks</url>
 		<connection>scm:git:git://github.com/wix/credit-card-networks.git</connection>
 		<developerConnection>scm:git:git@github.com:wix/credit-card-networks.git</developerConnection>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
 	
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
