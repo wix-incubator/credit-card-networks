@@ -69,7 +69,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<java.source.version>1.7</java.source.version>
 		<java.target.version>1.7</java.target.version>
 
 		<scala.dependencies.version>2.11</scala.dependencies.version>
@@ -108,7 +107,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>${java.source.version}</source>
+                    <source>${java.target.version}</source>
                     <target>${java.target.version}</target>
                 </configuration>
             </plugin>
@@ -130,7 +129,7 @@
 				<artifactId>scala-maven-plugin</artifactId>
 				<version>3.2.1</version>
 				<configuration>
-					<source>${java.source.version}</source>
+					<source>${java.target.version}</source>
 					<target>${java.target.version}</target>
 					<recompileMode>incremental</recompileMode>
 					<scalaCompatVersion>${scala.dependencies.version}</scalaCompatVersion>
