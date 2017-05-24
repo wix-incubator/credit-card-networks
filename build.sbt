@@ -1,5 +1,6 @@
 name := "credit-card-networks"
-version := "2.0.0"
+version := "1.3.0-SNAPSHOT"
+organization := "com.wix"
 licenses := Seq("Apache License, ASL Version 2.0" → url("http://www.apache.org/licenses/LICENSE-2.0"))
 
 scalaVersion := "2.12.2"
@@ -29,22 +30,24 @@ libraryDependencies ++= Seq(
 publishMavenStyle := true
 publishArtifact in Test := false
 pomIncludeRepository := (_ ⇒ false)
-publishTo := Some(
-  if (version.value.trim.endsWith("SNAPSHOT"))
-    "snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
   else
-    "releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
-
-startYear := Some(2017)
-organizationHomepage := Some(url("https://github.com/wix"))
-developers := Nil
-scmInfo := Some(ScmInfo(
-  browseUrl = url("https://github.com/wix/credit-card-networks.git"),
-  connection = "scm:git:git@github.com:wix/credit-card-networks.git"
-))
-
-// nice *magenta* prompt!
-
-shellPrompt in ThisBuild := { state ⇒
-  scala.Console.MAGENTA + Project.extract(state).currentRef.project + "> " + scala.Console.RESET
+    Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
+
+pomExtra :=
+  <url>https://github.com/wix/credit-card-networks</url>
+    <scm>
+      <url>git@github.com:wix/credit-card-networks.git</url>
+      <connection>scm:git:git@github.com:wix/credit-card-networks.git</connection>
+    </scm>
+    <developers>
+      <developer>
+        <id>ohadraz</id>
+        <name>Ohad Raz</name>
+      </developer>
+    </developers>
+
