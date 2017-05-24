@@ -1,4 +1,4 @@
-name := "credit-cart-networks"
+name := "credit-card-networks"
 version := "2.0.0"
 licenses := Seq("Apache License, ASL Version 2.0" → url("http://www.apache.org/licenses/LICENSE-2.0"))
 
@@ -39,8 +39,8 @@ startYear := Some(2017)
 organizationHomepage := Some(url("https://github.com/wix"))
 developers := Nil
 scmInfo := Some(ScmInfo(
-  browseUrl = url("https://github.com/wix/credit-cart-networks.git"),
-  connection = "scm:git:git@github.com:wix/credit-cart-networks.git"
+  browseUrl = url("https://github.com/wix/credit-card-networks.git"),
+  connection = "scm:git:git@github.com:wix/credit-card-networks.git"
 ))
 
 // nice *magenta* prompt!
