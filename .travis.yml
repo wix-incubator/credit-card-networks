@@ -5,7 +5,8 @@ scala:
   - 2.11.11
 
 script:
-  - sbt clean test
+#  - sbt clean test
+  - sbt "+++$TRAVIS_SCALA_VERSION clean" "+++$TRAVIS_SCALA_VERSION test"
 
 jdk:
   - oraclejdk8
@@ -16,8 +17,8 @@ env:
     - secure: "Ggbqb+sQE61y1o10fgG1oHDisqk1Zh4/xAIbOhwVMZLC8SJ7pwSVny7pZuWbqgM1gbsOrS78GVhjsB4XKp3oEz5+x8DboIXGzpPI+MUrLMNjNDnzYJWrZwGikqxeBk7Fu+jIGlWjBK6/FhYb9S9Cpho91siqmRFUeX7+PwhbpRNqyby32cefgL/6L2swDfAGhNdu9H1r1/FAx469vM6hpDtw+TuiYmkv8RQT4Mrqh6zufnhb5Obmx6XT2+b0OrreEpxP5CaBDhUg3RH5I2nuGyN0aMkMlvsIHXIZBTMVJ1MJRufhNXm+e+wcTTwa5UJz2716nD7j2vO4vg7h+sQAuoBrvxHesAL6mvl7Ryl7Rx1Smd7YO7JRdvh7+lvTSSvhUT5CVIppBtCegPrBfmBUwMQct97ADpVU11k7PoRZrS5WKc4Cx4KHSYlZPxIuTuvtkY8L0kCrAM7iswEX7oa5L3HYpJzES+H6IdcLEx8Njd6h6G2pdqwEbjpq3iOje5HFIbd/Ai7i61zqjuZRFjpZKni7XAteS+FaIplMTNqJDvHWhsD+qJmRFApLX9xKMzOi3dWezfeNHPBJ6EgpXbK/PyIcGYPwO4lDbQEoCjts4TGB8B0dQK3GYziOkziV9VBIdyXexDwsTAUHnxYbT+QvJpPSBobMzQmR9+pinIzmQDQ="
 
 after_success:
-   - bash env
-   - "[[ $TRAVIS_BRANCH == \"master\" ]] && { sbt publish; };"
+  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { sbt \"+++$TRAVIS_SCALA_VERSION publish\"; };"
+#   - "[[ $TRAVIS_BRANCH == \"master\" ]] && { sbt publish; };"
 
 #
 #cache:

@@ -1,6 +1,6 @@
 name := "credit-card-networks"
 version := "1.3.0"
-organization := "com.wix"
+organization := "com.wix.pay"
 licenses := Seq("Apache License, ASL Version 2.0" → url("http://www.apache.org/licenses/LICENSE-2.0"))
 
 scalaVersion := "2.12.2"
