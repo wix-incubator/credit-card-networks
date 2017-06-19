@@ -1,5 +1,5 @@
 name := "credit-card-networks"
-version := "1.3.0-SNAPSHOT"
+version := "1.3.0"
 organization := "com.wix.pay"
 licenses := Seq("Apache License, ASL Version 2.0" → url("http://www.apache.org/licenses/LICENSE-2.0"))
 
@@ -32,10 +32,7 @@ publishArtifact in Test := false
 pomIncludeRepository := (_ ⇒ false)
 publishTo := {
   val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases" at nexus + "service/local/staging/deploy/maven2")
+  Some("releases" at nexus + "content/repositories/releases")
 }
 
 pomExtra :=
