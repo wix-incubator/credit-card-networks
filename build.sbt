@@ -12,13 +12,6 @@ scalacOptions ++= Seq(
   "-Xlint",
   "-Xlint:-missing-interpolator")
 
-scalacOptions ++= {
-  if (scalaVersion.value startsWith "2.12")
-    Seq.empty
-  else
-    Seq("-target:jvm-1.7")
-}
-
 libraryDependencies ++= Seq(
   "org.scala-lang" % "scala-reflect" % scalaVersion.value,
   "org.specs2" %% "specs2-core" % "3.8.9" % "test",
