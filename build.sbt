@@ -3,8 +3,8 @@ version := "1.3.0-SNAPSHOT"
 organization := "com.wix.pay"
 licenses := Seq("Apache License, ASL Version 2.0" → url("http://www.apache.org/licenses/LICENSE-2.0"))
 
-scalaVersion := "2.12.2"
-crossScalaVersions := Seq("2.11.11", "2.12.2")
+scalaVersion := "2.12.6"
+crossScalaVersions := Seq("2.11.11", "2.12.6")
 
 scalacOptions ++= Seq(
   "-deprecation",
