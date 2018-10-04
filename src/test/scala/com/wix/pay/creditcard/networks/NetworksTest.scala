@@ -42,7 +42,7 @@ class NetworksTest extends SpecWithJUnit {
   "all" should {
     "return all supported Networks (and nothing but it)" in {
       Networks.all must contain(exactly(
-        "amex", "dankort", "diners","discover", "isracard", "jcb", "maestro", "mastercard", "unionpay", "visa"))
+        "amex", "dankort", "diners","discover", "isracard", "jcb", "maestro", "mastercard", "unionpay", "visa", "rupay"))
     }
   }
 }
